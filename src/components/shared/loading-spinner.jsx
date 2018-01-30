@@ -4,7 +4,7 @@ import styled, { keyframes } from 'styled-components'
 const StyledOverlay = styled.div`
     opacity: 0.4;
     filter: alpha(opacity=20);
-    background-color: ${props => props.theme.accent1.darken(0.2)};
+    background-color: ${props => props.theme.accent1};
     width: 100%;
     height: 100%;
     top: 0;

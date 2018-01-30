@@ -6,7 +6,6 @@ const global = `
   body {
     background: ${colors.background};
     font-family: Helvetica;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     color: ${colors.font1};
   }
