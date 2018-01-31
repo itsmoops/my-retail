@@ -29,14 +29,16 @@ class QuantityCounter extends React.Component {
         quantity: 1
     }
     handleIncrement = () => {
+        const quantity = this.state.quantity
         this.setState({
-            quantity: this.state.quantity + 1
+            quantity: quantity + 1
         })
     }
     handleDecrement = () => {
+        const quantity = this.state.quantity
         this.state.quantity !== 1 &&
             this.setState({
-                quantity: this.state.quantity - 1
+                quantity: quantity - 1
             })
     }
     render() {

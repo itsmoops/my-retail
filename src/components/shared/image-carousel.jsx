@@ -34,15 +34,16 @@ class ImageCarousel extends React.Component {
         })
     }
     handleArrowClick = e => {
+        const shiftedImages = [...this.state.images]
         if (e.target.parentNode.id === 'image-left') {
-            const lastImg = this.state.images.pop()
-            this.state.images.unshift(lastImg)
+            const lastImg = shiftedImages.pop()
+            shiftedImages.unshift(lastImg)
         } else {
-            const firstImg = this.state.images.shift()
-            this.state.images.push(firstImg)
+            const firstImg = shiftedImages.shift()
+            shiftedImages.push(firstImg)
         }
         this.setState({
-            images: this.state.images
+            images: shiftedImages
         })
     }
     handleImageClick = e => {
