@@ -17,7 +17,6 @@ const StyledDiv = styled.div`
 `
 
 function Reviews(props) {
-    console.log(props)
     return (
         <StyledDiv>
             <Flex>
