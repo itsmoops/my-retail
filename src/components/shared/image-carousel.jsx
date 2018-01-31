@@ -26,33 +26,30 @@ const StyledImage = styled(Image)`
 
 class ImageCarousel extends React.Component {
     state = {
-        images: [],
-        minIndex: 0,
-        maxIndex: 3
+        images: []
     }
-    componentWillReceiveProps = nextProps => {
+    componentDidMount = () => {
         this.setState({
-            images: nextProps.images.slice(this.state.minIndex, this.state.maxIndex)
+            images: this.props.images
         })
     }
     handleArrowClick = e => {
         if (e.target.parentNode.id === 'image-left') {
-            this.setState({
-                minIndex: this.state.minIndex - 1,
-                maxIndex: this.state.maxIndex - 1
-            })
+            const lastImg = this.state.images.pop()
+            this.state.images.unshift(lastImg)
         } else {
-            this.setState({
-                minIndex: this.state.minIndex + 1,
-                maxIndex: this.state.maxIndex + 1
-            })
+            const firstImg = this.state.images.shift()
+            this.state.images.push(firstImg)
         }
+        this.setState({
+            images: this.state.images
+        })
     }
     handleImageClick = e => {
         this.props.handleSelectPhoto(e.target.src)
     }
     render() {
-        const { images } = this.props
+        const { images } = this.state
         return (
             <StyledContainer>
                 <StyledIcon
@@ -62,7 +59,7 @@ class ImageCarousel extends React.Component {
                     onClick={this.handleArrowClick}
                 />
                 {images &&
-                    images.slice(this.state.minIndex, this.state.maxIndex).map((image, idx) => {
+                    images.slice(0, 3).map((image, idx) => {
                         return (
                             <StyledImage
                                 id={idx}
