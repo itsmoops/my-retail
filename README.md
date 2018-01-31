@@ -4,7 +4,9 @@ This application was created for the Target Engineer interview. It uses React, R
 
 I used an existing boilerplate that I have been working on in my spare time. Some of this may be overkill, but I wanted to show some of the tools that I use in personal projects.
 
-Unfortunately, the buzzer ran out and I was unable to get tests running in the time alotted. You can see the skeletons of the jest tests I was beginning to set up.
+~~Unfortunately, the buzzer ran out and I was unable to get tests running in the time alotted. You can see the skeletons of the jest tests I was beginning to set up.~~
+
+Scratch this ^ I was able to get a few tests going.
 
 The case study is published on Firebase hosting here:
 https://myretail-case-study.firebaseapp.com/

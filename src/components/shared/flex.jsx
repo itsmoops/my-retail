@@ -1,12 +1,10 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { Flex } from 'rebass'
 
 export default styled(Flex)`
-    ${props => css`
-        padding-top: 25px;
-        ${props.theme.screen.small} {
-            padding-top: 50px;
-            height: 100%;
-        }
-    `};
+    padding-top: 25px;
+    @media screen and (min-width: 40em) {
+        padding-top: 50px;
+        height: 100%;
+    }
 `

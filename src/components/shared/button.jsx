@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 const StyledButton = styled.button`
     background: ${props => props.background};
@@ -15,11 +15,9 @@ const StyledButton = styled.button`
     cursor: pointer;
     outline: none;
     border: 1px solid ${props => props.background};
-    ${props => css`
-        ${props.theme.screen.small} {
-            width: 200px;
-        }
-    `};
+    @media screen and (min-width: 40em) {
+        width: 200px;
+    }
 `
 
 class Button extends React.PureComponent {

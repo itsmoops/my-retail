@@ -24,17 +24,33 @@ const StyledIcon = styled(Icon)`
     padding: 10px;
 `
 
-function QuantityCounter(props) {
-    return (
-        <StyledDiv>
-            quantity:
-            <StyledIconContainer>
-                <StyledIcon id="quantity-plus" icon={plus} onClick={props.onChangeQuantity} />
-                &nbsp; {props.children} &nbsp;
-                <StyledIcon id="quantity-minus" icon={minus} onClick={props.onChangeQuantity} />
-            </StyledIconContainer>
-        </StyledDiv>
-    )
+class QuantityCounter extends React.Component {
+    state = {
+        quantity: 1
+    }
+    handleIncrement = () => {
+        this.setState({
+            quantity: this.state.quantity + 1
+        })
+    }
+    handleDecrement = () => {
+        this.state.quantity !== 1 &&
+            this.setState({
+                quantity: this.state.quantity - 1
+            })
+    }
+    render() {
+        return (
+            <StyledDiv>
+                quantity:
+                <StyledIconContainer>
+                    <StyledIcon id="quantity-plus" icon={plus} onClick={this.handleIncrement} />
+                    &nbsp; {this.state.quantity} &nbsp;
+                    <StyledIcon id="quantity-minus" icon={minus} onClick={this.handleDecrement} />
+                </StyledIconContainer>
+            </StyledDiv>
+        )
+    }
 }
 
 export default QuantityCounter

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { Box, Heading, Container, Text, Image, Tabs, TabItem } from 'rebass'
 import Icon from 'react-icons-kit'
 import { ic_local_offer } from 'react-icons-kit/md/ic_local_offer'
@@ -48,13 +48,11 @@ const StyledTabItem = styled(TabItem)`
     text-align: center;
     padding-bottom: 10px;
     padding-top: 10px;
-    ${props => css`
-        ${props.theme.screen.small} {
-            min-width: 130px;
-            font-size: 12px;
-            margin-right: 12px;
-        }
-    `};
+    @media screen and (min-width: 40em) {
+        min-width: 130px;
+        font-size: 12px;
+        margin-right: 12px;
+    }
 `
 
 const StyledListItem = styled.li`
@@ -87,23 +85,6 @@ class ProductDetail extends React.Component {
         this.setState({
             primaryPhotoURL: src
         })
-    }
-    handleQuantityChange = e => {
-        const target = e.target
-        const plus =
-            target.id === 'quantity-plus' ||
-            target.parentNode.id === 'quantity-plus' ||
-            target.parentNode.parentNode.id === 'quantity-plus'
-        if (plus) {
-            this.setState({
-                quantity: this.state.quantity + 1
-            })
-        } else {
-            this.state.quantity !== 1 &&
-                this.setState({
-                    quantity: this.state.quantity - 1
-                })
-        }
     }
     render() {
         const { product } = this.props
@@ -156,9 +137,7 @@ class ProductDetail extends React.Component {
                         </Container>
                         <Divider />
                         <StyledDiv>
-                            <QuantityCounter onChangeQuantity={this.handleQuantityChange}>
-                                {this.state.quantity}
-                            </QuantityCounter>
+                            <QuantityCounter />
                         </StyledDiv>
                         <StyledDiv>
                             {availableInStore && (

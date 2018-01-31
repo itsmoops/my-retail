@@ -17,7 +17,11 @@
         "type": "git",
         "url": "git+https://github.com/itsmoops/my-retail.git"
     },
-    "keywords": ["react", "redux", "myRetail"],
+    "keywords": [
+        "react",
+        "redux",
+        "myRetail"
+    ],
     "author": "Eric Moore",
     "license": "ISC",
     "bugs": {
@@ -26,9 +30,10 @@
     "homepage": "https://github.com/itsmoops/my-retail#readme",
     "dependencies": {
         "babel-jest": "^22.1.0",
-        "chai-enzyme": "^0.8.0",
+        "babel-preset-jest": "^22.1.0",
         "date-fns": "^1.29.0",
         "enzyme": "^3.3.0",
+        "enzyme-adapter-react-15": "^1.0.5",
         "firebase": "^4.6.0",
         "jest": "^22.1.4",
         "prop-types": "^15.5.10",

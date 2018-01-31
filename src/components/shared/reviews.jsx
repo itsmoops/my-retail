@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { Flex, Box, Heading, Text, Link } from 'rebass'
 import { format } from 'date-fns'
 import Divider from './divider'
@@ -10,11 +10,9 @@ const StyledDiv = styled.div`
     padding: 10px;
     margin-top: 20px;
 
-    ${props => css`
-        ${props.theme.screen.small} {
-            margin-top: 0px;
-        }
-    `};
+    @media screen and (min-width: 40em) {
+        margin-top: 0px;
+    }
 `
 
 function Reviews(props) {

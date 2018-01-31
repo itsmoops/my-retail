@@ -8,14 +8,8 @@
         "mocha": true
     },
     "globals": {
-        "React": true,
-        "ReactDOM": true,
-        "PropTypes": true,
         "state": true,
-        "firebase": true,
-        "Icon": true,
-        "horizontalCenter": true,
-        "colors": true
+        "expect": true
     },
     "rules": {
         "semi": [2, "never"],

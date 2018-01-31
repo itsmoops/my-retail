@@ -37,10 +37,6 @@ module.exports = {
                 NODE_ENV: JSON.stringify('development')
             }
         }),
-        new webpack.ProvidePlugin({
-            ReactDOM: 'react-dom',
-            horizontalCenter: ['react-icons-kit', 'horizontalCenter']
-        }),
         new ExtractTextPlugin('[name].css'),
         new CopyWebpackPlugin([{ from: './src/index.html', to: 'index.html' }])
     ],
