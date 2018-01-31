@@ -38,9 +38,7 @@ module.exports = {
             }
         }),
         new webpack.ProvidePlugin({
-            React: 'react',
             ReactDOM: 'react-dom',
-            PropTypes: 'prop-types',
             horizontalCenter: ['react-icons-kit', 'horizontalCenter']
         }),
         new ExtractTextPlugin('[name].css'),

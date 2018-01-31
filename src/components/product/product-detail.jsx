@@ -1,3 +1,5 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import styled, { css } from 'styled-components'
@@ -105,7 +107,7 @@ class ProductDetail extends React.Component {
     }
     render() {
         const { product } = this.props
-
+        // console.log(this.props)
         if (Object.keys(product).length > 0) {
             // we have a valid product
             const purchasingChannelCode = product.purchasingChannelCode
@@ -137,9 +139,7 @@ class ProductDetail extends React.Component {
                             <InlineText f={24} bold>
                                 {priceInfo.formattedPriceValue}{' '}
                             </InlineText>
-                            <InlineText>
-                                {priceInfo.priceQualifier.toLowerCase()}
-                            </InlineText>
+                            <InlineText>{priceInfo.priceQualifier.toLowerCase()}</InlineText>
                         </Container>
                         <Divider />
                         <Container style={{ color: '#c91300' }}>
@@ -215,6 +215,14 @@ class ProductDetail extends React.Component {
         }
         return null
     }
+}
+
+ProductDetail.defaultProps = {
+    product: {}
+}
+
+ProductDetail.propTypes = {
+    product: PropTypes.object
 }
 
 function mapStateToProps(state) {

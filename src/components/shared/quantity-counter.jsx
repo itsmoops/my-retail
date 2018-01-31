@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 import Icon from 'react-icons-kit'
 import { plus } from 'react-icons-kit/icomoon/plus'

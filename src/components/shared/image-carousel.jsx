@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 import { Container, Image } from 'rebass'
 import Icon from 'react-icons-kit'

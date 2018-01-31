@@ -1,3 +1,4 @@
+import React from 'react'
 import styled, { css } from 'styled-components'
 import { Flex, Box, Heading, Text, Link } from 'rebass'
 import { format } from 'date-fns'

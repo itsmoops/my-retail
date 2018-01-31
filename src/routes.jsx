@@ -1,3 +1,4 @@
+import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import ProductDetail from './components/product/product-detail'
 import LoadingSpinner from './components/shared/loading-spinner'

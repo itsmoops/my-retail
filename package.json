@@ -6,6 +6,7 @@
     "scripts": {
         "firebase-init": "firebase login && firebase init",
         "start": "webpack-dev-server",
+        "test": "jest",
         "build-dev": "webpack --config=webpack.config",
         "build-prod": "webpack --config=webpack.prod.config",
         "deploy-dev": "firebase use dev && yarn build-dev && firebase deploy",
@@ -16,11 +17,7 @@
         "type": "git",
         "url": "git+https://github.com/itsmoops/my-retail.git"
     },
-    "keywords": [
-        "react",
-        "redux",
-        "myRetail"
-    ],
+    "keywords": ["react", "redux", "myRetail"],
     "author": "Eric Moore",
     "license": "ISC",
     "bugs": {
@@ -28,8 +25,12 @@
     },
     "homepage": "https://github.com/itsmoops/my-retail#readme",
     "dependencies": {
+        "babel-jest": "^22.1.0",
+        "chai-enzyme": "^0.8.0",
         "date-fns": "^1.29.0",
+        "enzyme": "^3.3.0",
         "firebase": "^4.6.0",
+        "jest": "^22.1.4",
         "prop-types": "^15.5.10",
         "react": "^15.5.4",
         "react-dom": "^15.5.4",
@@ -39,6 +40,7 @@
         "react-redux": "^5.0.5",
         "react-router": "^4.2.0",
         "react-router-dom": "^4.1.1",
+        "react-test-renderer": "^15.6.2",
         "rebass": "^1.0.4",
         "redux": "^3.6.0",
         "redux-immutable-state-invariant": "^2.0.0",
