@@ -11,7 +11,7 @@ const StyledDiv = styled.div`
 
     ${props => css`
         ${props.theme.screen.small} {
-            margin-top: -90px;
+            margin-top: 0px;
         }
     `};
 `
