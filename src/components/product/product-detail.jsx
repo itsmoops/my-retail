@@ -138,7 +138,7 @@ class ProductDetail extends React.Component {
                                 {priceInfo.formattedPriceValue}{' '}
                             </InlineText>
                             <InlineText>
-                                {priceInfo.priceQualifier && priceInfo.priceQualifier.toLowerCase()}
+                                {priceInfo.priceQualifier.toLowerCase()}
                             </InlineText>
                         </Container>
                         <Divider />
