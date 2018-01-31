@@ -1,6 +1,6 @@
 # myRetail Target Case Study
 
-This application was created for the Target Lead Engineer interview It uses React, Redux, Firebase and Webpack.
+This application was created for the Target Engineer interview. It uses React, Redux, Firebase and Webpack.
 
 I used an existing boilerplate that I have been working on in my spare time. Some of this may be overkill, but I wanted to show some of the tools that I use in personal projects.
 
