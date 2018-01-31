@@ -52,7 +52,6 @@ class ImageCarousel extends React.Component {
     }
     render() {
         const { images } = this.props
-        images && console.log(images.slice(this.state.minIndex, this.state.maxIndex))
         return (
             <StyledContainer>
                 <StyledIcon

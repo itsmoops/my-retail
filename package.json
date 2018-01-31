@@ -16,7 +16,11 @@
         "type": "git",
         "url": "git+https://github.com/itsmoops/my-retail.git"
     },
-    "keywords": ["react", "redux", "myRetail"],
+    "keywords": [
+        "react",
+        "redux",
+        "myRetail"
+    ],
     "author": "Eric Moore",
     "license": "ISC",
     "bugs": {
@@ -24,10 +28,12 @@
     },
     "homepage": "https://github.com/itsmoops/my-retail#readme",
     "dependencies": {
+        "date-fns": "^1.29.0",
         "firebase": "^4.6.0",
         "prop-types": "^15.5.10",
         "react": "^15.5.4",
         "react-dom": "^15.5.4",
+        "react-html-parser": "^2.0.2",
         "react-icons-kit": "^1.0.7",
         "react-onclickoutside": "^6.6.2",
         "react-redux": "^5.0.5",

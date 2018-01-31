@@ -1,26 +1,23 @@
 import styled, { css } from 'styled-components'
 
 const StyledButton = styled.button`
-	background: ${colors.buttonBackground};
-	width: ${props => props.width};
-	float: ${props => props.align};
-	height: 50px;
-	padding: 10px 0px;
-	margin: 5px 0px;
-	font-size: 18px;
-	font: inherit;
-	cursor: pointer;
-	outline: none;
-	border-radius: ${props => props.theme.borderRadius};
-	border: 1px solid ${colors.buttonBackground.darken(0.1)};
-	&:hover {
-		background-color: ${colors.buttonBackground.darken(0.1)};
-	}
-	${props =>
-        props.disabled &&
-		css`
-			${props.theme.disabled};
-		`};
+    background: ${props => props.background};
+    color: ${props => props.color};
+    float: ${props => props.align};
+    width: 150px;
+    height: 50px;
+    padding: 10px 0px;
+    margin: 5px 5px;
+    font-size: 18px;
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid ${props => props.background};
+    ${props => css`
+        ${props.theme.screen.small} {
+            width: 200px;
+        }
+    `};
 `
 
 class Button extends React.PureComponent {
@@ -31,8 +28,10 @@ class Button extends React.PureComponent {
                 onClick={this.props.onClick}
                 align={this.props.align}
                 width={this.props.width}
+                background={this.props.background}
+                color={this.props.color}
                 disabled={this.props.disabled}>
-                {this.props.children}
+                {this.props.children.toUpperCase()}
             </StyledButton>
         )
     }
