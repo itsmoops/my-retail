@@ -29,6 +29,12 @@ Webpack dev server running at <http://localhost:8080>.
 yarn start
 ```
 
+### Test
+
+```
+yarn test
+```
+
 ### Build
 
 Outputs to `dist` folder.
