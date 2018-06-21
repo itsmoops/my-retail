@@ -5,9 +5,10 @@
     "main": "index.js",
     "scripts": {
         "firebase-init": "firebase login && firebase init",
+        "clean": "rm -rf dist",
         "start": "webpack-dev-server",
         "test": "jest",
-        "build": "webpack --config=webpack.config",
+        "build": "npm run clean && webpack --config=webpack.config",
         "deploy": "firebase use dev && yarn build && firebase deploy"
     },
     "repository": {
