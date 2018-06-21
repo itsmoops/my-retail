@@ -4,8 +4,6 @@ This application was created for the Target Engineer interview. It uses React, R
 
 I used an existing boilerplate that I have been working on in my spare time. Some of this may be overkill, but I wanted to show some of the tools that I use in personal projects.
 
-Scratch this ^ I was able to get a few tests going.
-
 The case study is published on Firebase hosting here:
 https://myretail-case-study.firebaseapp.com/
 
