@@ -7,11 +7,8 @@
         "firebase-init": "firebase login && firebase init",
         "start": "webpack-dev-server",
         "test": "jest",
-        "build-dev": "webpack --config=webpack.config",
-        "build-prod": "webpack --config=webpack.prod.config",
-        "deploy-dev": "firebase use dev && yarn build-dev && firebase deploy",
-        "deploy-prod": "firebase use prod && yarn build-prod && firebase deploy",
-        "deploy-all": "yarn deploy-dev && yarn deploy-prod"
+        "build": "webpack --config=webpack.config",
+        "deploy": "firebase use dev && yarn build && firebase deploy"
     },
     "repository": {
         "type": "git",

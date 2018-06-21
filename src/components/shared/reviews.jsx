@@ -24,6 +24,8 @@ const StyledDiv = styled.div`
 `
 
 const RightText = styled(Text)`
+    cursor: pointer;
+    font-weight: bold;
     float: right;
 `
 
