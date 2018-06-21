@@ -61,13 +61,16 @@ const StyledListItem = styled.li`
 `
 
 class ProductDetail extends React.Component {
-    state = {
-        primaryPhotoURL: undefined,
-        carouselImages: undefined,
-        quantity: 1
-    }
-    componentWillMount() {
+    constructor() {
+        super()
+
         document.title = 'myRetail'
+
+        this.state = {
+            primaryPhotoURL: undefined,
+            carouselImages: undefined,
+            quantity: 1
+        }
     }
     componentDidMount() {
         this.props.actions.getProductDetails()
@@ -88,7 +91,7 @@ class ProductDetail extends React.Component {
     }
     render() {
         const { product } = this.props
-        // console.log(this.props)
+
         if (Object.keys(product).length > 0) {
             // we have a valid product
             const purchasingChannelCode = product.purchasingChannelCode
@@ -182,10 +185,14 @@ class ProductDetail extends React.Component {
                         </Container>
                     </Box>
                     <Box w={[0, 0, 0, 1 / 8]} />
-
                     <Box w={[0, 0, 0, 1 / 8]} />
                     <Box w={[1, 1 / 2, 1 / 2, 3 / 8]} ml="auto" mr="auto">
-                        <Reviews pro={reviews.Pro[0]} con={reviews.Con[0]} />
+                        <Reviews
+                            pro={reviews.Pro[0]}
+                            con={reviews.Con[0]}
+                            totalReviews={reviews.totalReviews}
+                            stars={parseInt(reviews.consolidatedOverallRating)}
+                        />
                     </Box>
                     <Box w={[1, 1 / 2, 1 / 2, 3 / 8]} ml="auto" mr="auto" />
                     <Box w={[0, 0, 0, 1 / 8]} />
@@ -216,4 +223,7 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductDetail)
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(ProductDetail)

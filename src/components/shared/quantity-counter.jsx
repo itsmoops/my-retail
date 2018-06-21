@@ -46,9 +46,9 @@ class QuantityCounter extends React.Component {
             <StyledDiv>
                 quantity:
                 <StyledIconContainer>
-                    <StyledIcon id="quantity-plus" icon={plus} onClick={this.handleIncrement} />
-                    &nbsp; {this.state.quantity} &nbsp;
                     <StyledIcon id="quantity-minus" icon={minus} onClick={this.handleDecrement} />
+                    &nbsp; {this.state.quantity} &nbsp;
+                    <StyledIcon id="quantity-plus" icon={plus} onClick={this.handleIncrement} />
                 </StyledIconContainer>
             </StyledDiv>
         )
